@@ -1,11 +1,16 @@
 package web.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import web.models.Car;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class CarServiceImpl implements CarService {
+
     @Override
     public List<Car> getCarListUpd(List<Car> carList, int count) {
         if (count >= 5)
